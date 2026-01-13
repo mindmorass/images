@@ -49,6 +49,9 @@ jobs:
             # Get changed files
             if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }})
+            elif [[ "${{ github.event.before }}" == "0000000000000000000000000000000000000000" ]]; then
+              # Initial commit - list all files
+              CHANGED=$(git ls-tree -r --name-only ${{ github.sha }})
             else
               CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
             fi
