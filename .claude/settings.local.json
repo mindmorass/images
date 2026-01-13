@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(git remote add:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "mcp__plugin_reflex_git__git_status",
+      "mcp__plugin_reflex_git__git_log",
+      "mcp__plugin_reflex_git__git_add"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "atlassian",
+    "git",
+    "github",
+    "microsoft-docs",
+    "azure",
+    "azure-devops",
+    "markitdown",
+    "sql-server",
+    "playwright",
+    "devbox",
+    "azure-ai-foundry",
+    "m365-agents"
+  ]
+}
